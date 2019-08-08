@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-nuevo',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NuevoComponent implements OnInit {
 
-  constructor() { }
+  forma:FormGroup
+  constructor() { 
+    this.forma = new FormGroup({
+      titulo: new FormControl("", [Validators.required]),
+      lanzado: new FormControl("", [Validators.required]),
+      precio: new FormControl("", [Validators.required]),
+      genero: new FormControl("", [Validators.required])
+    });
+  }
 
   ngOnInit() {
   }
 
+  guardarCambios(){
+    console.log(this.forma);
+  }
+  
 }
