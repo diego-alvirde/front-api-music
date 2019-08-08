@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-nuevo',
@@ -9,7 +10,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class NuevoComponent implements OnInit {
 
   forma:FormGroup
-  constructor() { 
+
+  constructor(private albumService:ApiService) { 
     this.forma = new FormGroup({
       titulo: new FormControl("", [Validators.required]),
       lanzado: new FormControl("", [Validators.required]),
@@ -21,8 +23,8 @@ export class NuevoComponent implements OnInit {
   ngOnInit() {
   }
 
-  guardarCambios(){
-    console.log(this.forma);
+  guardarCambios(){    
+    this.albumService.crearAlbum(this.forma.value);
   }
   
 }

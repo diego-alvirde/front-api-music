@@ -8,11 +8,12 @@ import { AlbumModel } from '../models/album.model';
   styleUrls: ['./album.component.css']
 })
 export class AlbumComponent implements OnInit {
-  albums: any[] = [];
+  albums: AlbumModel[];
+
   constructor(private albumService:ApiService) { }
 
   ngOnInit() {    
-    this.albumService.getAlbums().subscribe( (resp:any) => {
+    this.albumService.getAlbums().subscribe( (resp:AlbumModel[]) => {
       this.albums = resp;
     })
   }
