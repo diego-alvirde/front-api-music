@@ -4,31 +4,31 @@
 
 <form [formGroup]="forma" (ngSubmit)="guardarCambios()" novalidate="novalidate">
   <div class="form-group">
-      <label for="titulo">Titulo</label>
-      <input type="email" class="form-control" formControlName="titulo">
-      <div *ngIf="forma.controls['titulo'].errors?.required" class="form-control-feedback">
-          El titulo es necesario!
-      </div>
+    <label for="titulo">Titulo</label>
+    <input type="email" class="form-control" formControlName="titulo">    
+    <div *ngIf="forma.controls['titulo'].errors?.required" class="form-control-feedback">
+      El titulo es necesario!
+    </div>    
   </div>
   <div class="form-group">
-      <label for="lanzado">Lanzado</label>
-      <input type="text" class="form-control" id="lanzado" formControlName="lanzado">
-      <div *ngIf="forma.controls['lanzado'].errors?.required" class="form-control-feedback">
-        El lanzado es necesario!
+    <label for="lanzado">Lanzado</label>
+    <input type="text" class="form-control" id="lanzado" formControlName="lanzado">
+    <div *ngIf="forma.controls['lanzado'].errors?.required" class="form-control-feedback">
+      El lanzado es necesario!
     </div>
   </div>
   <div class="form-group">
-      <label for="precio">Precio</label>
-      <input type="text" class="form-control" id="precio" formControlName="precio">
-      <div *ngIf="forma.controls['precio'].errors?.required" class="form-control-feedback">
-        El precio es necesario!
+    <label for="precio">Precio</label>
+    <input type="text" class="form-control" id="precio" formControlName="precio">
+    <div *ngIf="forma.controls['precio'].errors?.required" class="form-control-feedback">
+      El precio es necesario!
     </div>
   </div>
   <div class="form-group">
-      <label for="genero">Genero</label>
-      <input type="text" class="form-control" id="genero" formControlName="genero">
-      <div *ngIf="forma.controls['genero'].errors?.required" class="form-control-feedback">
-        El genero es necesario!
+    <label for="genero">Genero</label>
+    <input type="text" class="form-control" id="genero" formControlName="genero">
+    <div *ngIf="forma.controls['genero'].errors?.required" class="form-control-feedback">
+      El genero es necesario!
     </div>
   </div>
 
