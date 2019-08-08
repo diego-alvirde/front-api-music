@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ApiService } from '../services/api.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-nuevo',
@@ -27,10 +28,11 @@ export class NuevoComponent implements OnInit {
 
   guardarCambios(){        
     if(!this.forma.invalid){
-      this.albumService.crearAlbum(this.forma.value);
-      alert("Guardado");
+      this.albumService.crearAlbum(this.forma.value);      
+      Swal.fire('Correcto', 'El Album se guardo correctamente!', 'success');
+      this.forma.reset();      
     } else{
-      alert("Verifique los datos!!!")
+      Swal.fire('Error', 'Verifica los datos!', 'error')
       return;
     }
   }
