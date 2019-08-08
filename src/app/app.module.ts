@@ -9,12 +9,14 @@ import { NuevoComponent } from './nuevo/nuevo.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { AlbumComponent } from './album/album.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NuevoComponent
+    NuevoComponent,
+    AlbumComponent
   ],
   imports: [
     BrowserModule,
