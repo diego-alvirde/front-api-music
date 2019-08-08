@@ -5,10 +5,10 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiService {
-  private url = "localhost:8080/api/albums";
+  private url = "http://localhost:8080/api/albums";
   constructor(private http: HttpClient) { }
 
-  getHeroes(){
+  getAlbums(){    
     return this.http.get(`${this.url}`);
   }
 }

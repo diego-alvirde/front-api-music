@@ -8,7 +8,7 @@ import { AlbumComponent } from './album/album.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'nuevo', component: NuevoComponent },
-  { path: 'album', component: AlbumComponent },
+  { path: 'albums', component: AlbumComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 

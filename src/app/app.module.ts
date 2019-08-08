@@ -8,8 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { NuevoComponent } from './nuevo/nuevo.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AlbumComponent } from './album/album.component';
+import { ApiService } from './services/api.service';
 
 @NgModule({
   declarations: [
@@ -22,10 +23,10 @@ import { AlbumComponent } from './album/album.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpModule,
-    ReactiveFormsModule
+    HttpClientModule,
+    ReactiveFormsModule,    
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
